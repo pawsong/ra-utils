@@ -21,17 +21,17 @@ import {
 } from 'ra-core'
 
 export interface Resource {
-  getList: (params: GetListParams) => Promise<GetListResult>
-  getOne: (params: GetOneParams) => Promise<GetOneResult>
-  getMany: (params: GetManyParams) => Promise<GetManyResult>
-  getManyReference: (
+  getList?: (params: GetListParams) => Promise<GetListResult>
+  getOne?: (params: GetOneParams) => Promise<GetOneResult>
+  getMany?: (params: GetManyParams) => Promise<GetManyResult>
+  getManyReference?: (
     params: GetManyReferenceParams,
   ) => Promise<GetManyReferenceResult>
-  update: (params: UpdateParams) => Promise<UpdateResult>
-  updateMany: (params: UpdateManyParams) => Promise<UpdateManyResult>
-  create: (params: CreateParams) => Promise<CreateResult>
-  delete: (params: DeleteParams) => Promise<DeleteResult>
-  deleteMany: (params: DeleteManyParams) => Promise<DeleteManyResult>
+  update?: (params: UpdateParams) => Promise<UpdateResult>
+  updateMany?: (params: UpdateManyParams) => Promise<UpdateManyResult>
+  create?: (params: CreateParams) => Promise<CreateResult>
+  delete?: (params: DeleteParams) => Promise<DeleteResult>
+  deleteMany?: (params: DeleteManyParams) => Promise<DeleteManyResult>
 }
 
 export function createDataProvider(
