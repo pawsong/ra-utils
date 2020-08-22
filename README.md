@@ -4,7 +4,7 @@
 
 ## createDataProvider
 
-Write `react-admin` data-provider per each resource manually.
+Manually create a `react-admin` data-provider for each resource.
 
 ```ts
 import { createDataProvider, Resource } from 'ra-utils'
